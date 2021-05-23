@@ -1,0 +1,32 @@
+MDBoxLayout:
+    orientation: 'vertical'
+    #klicks: int
+
+#    MDToolbar:
+#        title: "Klick Tel"
+#        left_action_items: [["menu", lambda x: app.callback()]]
+#        right_action_items: [["dots-vertical", lambda x: app.callback()]]
+#        #md_bg_color: app.theme_cls.accent_color
+#        elevation: 10
+
+    MDLabel:
+        id: my_label
+        text: "Ein Text"
+        halign: "center"
+
+    MDLabel:
+        id: my_label2
+        text: "Ein Text2"
+        halign: "center"
+
+    MDBottomAppBar:
+        md_bg_color: 0, 0, 1, 1
+
+        MDToolbar:
+            title: "Klick Tel"
+            icon: "selection-search"
+            type: "bottom"
+            left_action_items: [["menu", lambda x: app.info()]]
+            #right_action_items: [["dots-vertical", lambda x: app.callback(x), "this is the More Actions"]]
+            mode: "end"
+            on_action_button: app.suchen()
